@@ -1,0 +1,7 @@
+{
+  "name": "recuperatorio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
