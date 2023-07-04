@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      HOME
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card *ngFor="let arrayrick of arrayListaName;">
+  <ion-searchbar color="success" [(ngModel)]="textobuscar" (ionChange)="buscar() ">
+  </ion-searchbar>
+
+  <ion-card *ngFor="let arrayrick of filteredArray">
     <ion-card-header>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img alt="Silhouette of a person's head" src="{{arrayrick.image}}" />
-    </ion-avatar>
-    <ion-label><h1>{{arrayrick.name}}</h1></ion-label>
-  </ion-item>
-</ion-card-header>
-</ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" [src]="arrayrick.image" />
+        </ion-avatar>
+        <ion-label >
+          <h1>{{ arrayrick.name }}</h1>
+        </ion-label>
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
