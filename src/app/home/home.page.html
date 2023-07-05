@@ -7,10 +7,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar color="success" [(ngModel)]="textobuscar" (ionChange)="buscar() ">
+  <ion-searchbar color="success" [(ngModel)]="textobuscar" (ionChange)="buscar()" >
   </ion-searchbar>
 
-  <ion-card *ngFor="let arrayrick of filteredArray">
+  <ion-card *ngFor="let arrayrick of filteredArray"[routerLink]="['/tabs/detallesrick/' + arrayrick.id]">
     <ion-card-header>
       <ion-item>
         <ion-avatar slot="start">

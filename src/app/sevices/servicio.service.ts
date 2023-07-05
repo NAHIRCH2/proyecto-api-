@@ -10,4 +10,5 @@ export class ServicioService {
   rickget(){
     return this.http.get<RootObject>('https://rickandmortyapi.com/api/character')
   }
+  
 }

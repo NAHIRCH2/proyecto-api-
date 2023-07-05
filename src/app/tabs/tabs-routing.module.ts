@@ -9,7 +9,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'detallesrick',
+        path: 'detallesrick/:id',
         loadChildren: () => import('./../detallesrick/detallesrick.module').then(m => m.DetallesrickPageModule)
       },
       {

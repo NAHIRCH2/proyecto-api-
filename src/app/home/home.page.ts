@@ -16,7 +16,6 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.service.rickget().subscribe((respuesta) => {
-      console.log(respuesta);
       this.arrayListaName = respuesta.results;
       this.filteredArray = this.arrayListaName;
     });
